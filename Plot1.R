@@ -6,7 +6,7 @@ hpc <- read.csv("~/Documents/Coursera Data Science/Exploratory Data Analysis/hou
 SubHPC <- subset(hpc, Date =="1/2/2007" | Date == "2/2/2007")
 
 ## Setup Graphic device and PNG parameters
-png(filename = "plot.1",width = 480, height = 480 )
+png(filename = "plot1.png",width = 480, height = 480 )
 
 ##Start plotting the data into designated plots
 hist(SubHPC$Global_active_power, xlab = "Global Active Power(kilowatts)", main = "Global Active Power", col = "red")

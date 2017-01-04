@@ -9,7 +9,7 @@ SubHPC <- subset(hpc, Date =="1/2/2007" | Date == "2/2/2007")
 datetime <- strptime(paste(SubHPC$Date, SubHPC$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 
 ## Setup Graphic device and PNG parameters
-png(filename = "plot.4",width = 480, height = 480 )
+png(filename = "plot4.png",width = 480, height = 480 )
 
 ##Start plotting the data into designated plots
 par(mfrow = c(2, 2), mar = c(4, 4, 2, 1), oma = c(0, 0, 2, 0))
@@ -19,7 +19,7 @@ with(SubHPC, {
   
 plot(x = datetime , y = Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering " )
 lines(x = datetime , y = Sub_metering_2, col = "red")
-lines(x = SubHPCdt, y = Sub_metering_3, col = "blue")
+lines(x = datetime, y = Sub_metering_3, col = "blue")
 legend("topright",  legend=names(SubHPC)[7:9],lty=1,col=c("black","blue","red"))
 plot(x = datetime , y = Global_reactive_power , type = "l" )
 })

@@ -9,7 +9,7 @@ SubHPC <- subset(hpc, Date =="1/2/2007" | Date == "2/2/2007")
 datetime <- strptime(paste(SubHPC$Date, SubHPC$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 
 ## Setup Graphic device and PNG parameters
-png(filename = "plot.2",width = 480, height = 480 )
+png(filename = "plot2.png",width = 480, height = 480 )
 
 ##Start plotting the data into designated plots
 plot(x = datetime, y = SubHPC$Global_active_power, type = "l", ylab = "Global Active Power(kilowatts)", main = "Global Active Power")
